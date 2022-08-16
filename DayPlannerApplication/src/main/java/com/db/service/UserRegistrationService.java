@@ -20,5 +20,15 @@ public class UserRegistrationService {
 		
 		return userDetails;
 	}
+	
+	public Boolean userRegistration(UserDetailsVO userData) {
+		
+		UserDetailsVO save = userRepo.save(userData);
+		if(save != null) {
+			return true;
+		}else {
+		return false;
+		}
+	}
 
 }

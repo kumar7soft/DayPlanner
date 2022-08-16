@@ -17,7 +17,7 @@ public class PlanningController {
 	
 	@PostMapping("/verify")
 	public String validateUser(@RequestBody UserDetailsVO user ) {
-		return "The given user is valid user "+user.getFirstName();
+		return "The given user is valid user "+user.getPhoneNumber();
 	}
 	
 }

@@ -17,21 +17,45 @@ public class UserDetailsVO {
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ID")
 	private Long id;
-	@Column(name="LastName")
-	private String lastName;
-	@Column(name="FirstName")
-	private String firstName;
 	@Column(name="Age")
 	private String age;
 	@Column(name="Phone")
 	private String phoneNumber;
-	public Long getId() {
-		return id;
+	
+	@Column(name="First_Name")
+	private String firstName;
+	@Column(name="Last_Name")
+	private String lastName;
+	
+	@Column(name="Email")
+	private String email;
+	
+	@Column(name="Gender")
+	private String gender;
+	@Column(name="Nationality")
+	private String nationality;
+	
+	
+	public String getGender() {
+		return gender;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getNationality() {
+		return nationality;
+	}
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	public String getLastName() {
 		return lastName;
@@ -39,11 +63,17 @@ public class UserDetailsVO {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getEmail() {
+		return email;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public String getAge() {
 		return age;
